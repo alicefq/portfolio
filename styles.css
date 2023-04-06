@@ -18,6 +18,7 @@
 nav {
     width: 100%;
     background-color: var(--orange);
+    overflow: hidden;
 }
 nav > ul {
     list-style: none;
@@ -29,4 +30,45 @@ nav > ul {
 nav > ul > li {
     padding: 1rem;
     font-size: 1.4rem;
+}
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+.nav-link a:hover {
+    cursor: pointer;
+}
+.top-navbar .icon {
+    display: none;
+}
+.icon {
+    color: black;
+}
+/* Hide all menu links other than Burger Icon when screen is less than 600px */
+@media screen and (max-width: 600px) {
+    .nav-link {
+        display: none;
+    } 
+    #navbar .icon {
+        float: right;
+        display: block;
+    }
+}
+/* Add 'responsive' class to nav with JS when user click on the Burger Icon */
+@media screen and (max-width: 600px) {
+    .top-navbar.responsive {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .top-navbar.responsive .icon {
+        right: 0;
+        top: 0;
+    }
+    .top-navbar.responsive .nav-link {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
