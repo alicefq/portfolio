@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto sans', sans-serif;
+}
+
+/* Vars */
+:root {
+    --lightmint: #E5F9E0;
+    --brightpurple: #9593D3;
+    --darkpurple: #382633;
+    --brown: #96705B;
+    --orange: #FF9770;
+}
+
+/* Navbar Styles */
+nav {
+    width: 100%;
+    background-color: var(--orange);
+}
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: end;
+}
+nav > ul > li {
+    padding: 1rem;
+    font-size: 1.4rem;
+}
